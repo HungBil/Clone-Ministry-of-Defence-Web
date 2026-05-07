@@ -2,6 +2,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ARTICLES } from "@/lib/articles";
+import { proxyImage } from "@/lib/proxyImage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Tin tức - Sự kiện" };
@@ -22,13 +23,7 @@ export default function NewsPage() {
           <div className="article-list">
             {ARTICLES.map((article) => (
               <Link key={article.slug} href={`/bai-viet/${article.slug}`} className="article-card" style={{ display: "flex" }}>
-                {article.imageUrl ? (
-                  <img src={article.imageUrl} alt={article.title} className="article-card-img" />
-                ) : (
-                  <div className="article-card-img" style={{ background: "#003366", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 11, padding: 6 }}>
-                    {article.category}
-                  </div>
-                )}
+                <img src={proxyImage(article.imageUrl)} alt={article.title} className="article-card-img" />
                 <div className="article-card-body">
                   <div className="article-meta">
                     <span className="article-category">{article.category}</span>

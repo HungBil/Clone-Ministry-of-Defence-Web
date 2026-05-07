@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getArticleBySlug, ARTICLES } from "@/lib/articles";
+import { proxyImage } from "@/lib/proxyImage";
 import type { Metadata } from "next";
 
 interface Props {
@@ -60,7 +61,7 @@ export default async function ArticlePage({ params }: Props) {
 
           {article.imageUrl && (
             <figure style={{ marginBottom: 20 }}>
-              <img src={article.imageUrl} alt={article.title} style={{ width: "100%", borderRadius: 4 }} />
+              <img src={proxyImage(article.imageUrl)} alt={article.title} style={{ width: "100%", borderRadius: 4 }} />
               <figcaption>{article.title}</figcaption>
             </figure>
           )}
@@ -89,11 +90,7 @@ export default async function ArticlePage({ params }: Props) {
               {related.length > 0 ? (
                 related.map((a) => (
                   <Link key={a.slug} href={`/bai-viet/${a.slug}`} className="sidebar-list-item" style={{ display: "flex" }}>
-                    {a.imageUrl ? (
-                      <img src={a.imageUrl} alt={a.title} />
-                    ) : (
-                      <div style={{ width: 64, height: 48, background: "#003366", flexShrink: 0, borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 18 }}>★</div>
-                    )}
+                    <img src={proxyImage(a.imageUrl)} alt={a.title} style={{ width: 64, height: 48, objectFit: "cover", flexShrink: 0, borderRadius: 3 }} />
                     <div>
                       <p>{a.title}</p>
                       <span>{a.date}</span>

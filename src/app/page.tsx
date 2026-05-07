@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ARTICLES, getRecentArticles } from "@/lib/articles";
+import { ARTICLES } from "@/lib/articles";
+import { proxyImage } from "@/lib/proxyImage";
 
 const FEATURED = ARTICLES[0];
 const MAIN_NEWS = ARTICLES.slice(1, 5);
@@ -37,13 +37,7 @@ export default function HomePage() {
           {/* Featured article */}
           <Link href={`/bai-viet/${FEATURED.slug}`} className="featured-article" style={{ display: "block" }}>
             <div className="featured-img-wrap">
-              {FEATURED.imageUrl ? (
-                <img src={FEATURED.imageUrl} alt={FEATURED.title} />
-              ) : (
-                <div style={{ background: "#b00", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 18, padding: 24 }}>
-                  {FEATURED.title}
-                </div>
-              )}
+              <img src={proxyImage(FEATURED.imageUrl)} alt={FEATURED.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
             <div className="featured-content">
               <div className="article-meta">
@@ -60,13 +54,7 @@ export default function HomePage() {
           <div className="article-list">
             {MAIN_NEWS.map((article) => (
               <Link key={article.slug} href={`/bai-viet/${article.slug}`} className="article-card" style={{ display: "flex" }}>
-                {article.imageUrl ? (
-                  <img src={article.imageUrl} alt={article.title} className="article-card-img" />
-                ) : (
-                  <div className="article-card-img" style={{ background: "#003366", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 11, padding: 6, textAlign: "center" }}>
-                    {article.category}
-                  </div>
-                )}
+                <img src={proxyImage(article.imageUrl)} alt={article.title} className="article-card-img" />
                 <div className="article-card-body">
                   <div className="article-meta">
                     <span className="article-category">{article.category}</span>
@@ -86,13 +74,7 @@ export default function HomePage() {
           <div className="article-list">
             {FOREIGN_NEWS.map((article) => (
               <Link key={article.slug} href={`/bai-viet/${article.slug}`} className="article-card" style={{ display: "flex" }}>
-                {article.imageUrl ? (
-                  <img src={article.imageUrl} alt={article.title} className="article-card-img" />
-                ) : (
-                  <div className="article-card-img" style={{ background: "#cc0000", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 11, padding: 6, textAlign: "center" }}>
-                    {article.category}
-                  </div>
-                )}
+                <img src={proxyImage(article.imageUrl)} alt={article.title} className="article-card-img" />
                 <div className="article-card-body">
                   <div className="article-meta">
                     <span>{article.date}</span>
@@ -125,11 +107,7 @@ export default function HomePage() {
             <div className="sidebar-list">
               {SIDEBAR_NEWS.map((article) => (
                 <Link key={article.slug} href={`/bai-viet/${article.slug}`} className="sidebar-list-item" style={{ display: "flex" }}>
-                  {article.imageUrl ? (
-                    <img src={article.imageUrl} alt={article.title} />
-                  ) : (
-                    <div style={{ width: 64, height: 48, background: "#003366", flexShrink: 0, borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, color: "white" }}>★</div>
-                  )}
+                  <img src={proxyImage(article.imageUrl)} alt={article.title} style={{ width: 64, height: 48, objectFit: "cover", flexShrink: 0, borderRadius: 3 }} />
                   <div>
                     <p>{article.title}</p>
                     <span>{article.date}</span>

@@ -29,7 +29,7 @@ Các cử tri bày tỏ phấn khởi, đồng tình trước các chủ trươn
 Thay mặt đoàn Đại biểu Quốc hội tỉnh Đồng Tháp, Đại tướng Nguyễn Tân Cương cảm ơn các ý kiến phát biểu thẳng thắn, tâm huyết của các cử tri; giải đáp một số nội dung thuộc thẩm quyền mà cử tri quan tâm; đồng thời thông tin thêm về kết quả Kỳ họp thứ nhất, Quốc hội khóa XVI và một số kết quả nổi bật trong thực hiện nhiệm vụ quân sự, quốc phòng toàn quân thời gian qua.
 
 Đại tướng Nguyễn Tân Cương mong muốn cử tri tiếp tục đồng hành chặt chẽ cùng cấp ủy, chính quyền và các cơ quan chức năng địa phương; kịp thời phát hiện, chủ động phòng ngừa, đấu tranh hiệu quả với các loại tội phạm, góp phần giữ vững an ninh trật tự trên địa bàn.`,
-    imageUrl: "http://bqp.vn/wcm/connect/88ff78b3-79d3-4c0d-a747-33a56e6b6977/1/image001.jpg?MOD=AJPERES",
+    imageUrl: "https://images.unsplash.com/photo-1562240020-ce31ccb0fa7d?w=800&q=80",
   },
   {
     slug: "thuc-day-hop-tac-phap-luat-quan-su-viet-nam-campuchia",
@@ -49,7 +49,7 @@ Trong khuôn khổ chuyến thăm, Đoàn cán bộ Cục Pháp chế Bộ Quố
 Phát biểu tại hội đàm, Đại tướng Mam Sophat, Cục trưởng Cục Pháp chế Bộ Quốc phòng Cam-pu-chia bày tỏ cảm ơn lãnh đạo Bộ Quốc phòng Việt Nam luôn tạo điều kiện hỗ trợ, giúp đỡ để cơ quan pháp chế hai Bộ Quốc phòng triển khai hiệu quả các nội dung hợp tác.
 
 Trên cơ sở những kết quả đã đạt được, thời gian tới, hai bên xác định tiếp tục tăng cường hơn nữa mối quan hệ hợp tác, trao đổi kinh nghiệm, hỗ trợ lẫn nhau trong thực hiện nhiệm vụ, như: Xây dựng pháp luật về quân sự, quốc phòng, mô hình tổ chức của tổ chức pháp chế; đào tạo, bồi dưỡng, tập huấn cho cán bộ pháp chế Quân đội hai nước.`,
-    imageUrl: "http://bqp.vn/wcm/connect/52d414dc-c0ea-4107-ab77-9ca62e95b4a0/1/image001.jpg?MOD=AJPERES",
+    imageUrl: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
   },
   {
     slug: "viet-nam-tho-nhi-ky-tang-cuong-hop-tac-quoc-phong",
@@ -67,7 +67,7 @@ Thượng tướng Nguyễn Trường Thắng nhấn mạnh, Việt Nam đánh g
 Thượng tướng Nguyễn Trường Thắng chuyển lời mời của Đại tướng Phan Văn Giang, Bộ trưởng Bộ Quốc phòng Việt Nam tới Bộ trưởng Yasar Guler cùng đoàn doanh nghiệp quốc phòng Thổ Nhĩ Kỳ tham dự Triển lãm Quốc phòng quốc tế Việt Nam lần thứ ba vào tháng 12/2026 tại Việt Nam.
 
 Chào mừng đoàn sang thăm, Bộ trưởng Yasar Guler khẳng định Việt Nam là đối tác quan trọng trong khu vực châu Á - Thái Bình Dương của Thổ Nhĩ Kỳ, mong muốn hợp tác quốc phòng giữa hai nước ngày càng phát triển lên tầm cao mới, sâu rộng, thiết thực, hiệu quả.`,
-    imageUrl: "http://bqp.vn/wcm/connect/21e00a48-9392-4f7d-999f-33b6dd38a4aa/1/image001.jpg?MOD=AJPERES",
+    imageUrl: "https://images.unsplash.com/photo-1570126618953-d437176e8c79?w=800&q=80",
   },
   {
     slug: "phat-huy-truyen-thong-hai-quan-cach-mang-chinh-quy",
