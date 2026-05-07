@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ArticleChatWidget from "@/components/ArticleChatWidget";
 import { getArticleBySlug, ARTICLES } from "@/lib/articles";
 import { proxyImage } from "@/lib/proxyImage";
 import type { Metadata } from "next";
@@ -103,12 +104,8 @@ export default async function ArticlePage({ params }: Props) {
             </div>
           </div>
 
-          <div className="sidebar-section" style={{ padding: "16px", background: "linear-gradient(135deg, #001a33, #003366)", color: "white", textAlign: "center" }}>
-            <div style={{ fontSize: 28, marginBottom: 6 }}>🤖</div>
-            <h3 style={{ fontSize: 13, fontWeight: 700, marginBottom: 6, color: "#c8a44a" }}>Hỏi đáp AI về bài viết này</h3>
-            <Link href="/chat" style={{ display: "inline-block", background: "#cc0000", color: "white", padding: "7px 14px", borderRadius: 4, fontSize: 12, fontWeight: 600 }}>
-              Mở Chatbot →
-            </Link>
+          <div className="sidebar-section" style={{ padding: 0, overflow: "hidden" }}>
+            <ArticleChatWidget articleTitle={article.title} />
           </div>
         </aside>
       </div>
